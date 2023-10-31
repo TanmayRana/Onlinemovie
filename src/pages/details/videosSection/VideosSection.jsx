@@ -24,7 +24,7 @@ const VideosSection = ({ data, loading }) => {
 
   return (
     <div className="videosSection">
-      <ContentWrapper>
+      <div className="contentWrapper">
         <div className="sectionHeading">Official Videos</div>
         {!loading ? (
           <div className="videos">
@@ -55,7 +55,7 @@ const VideosSection = ({ data, loading }) => {
             {loadingSkeleton()}
           </div>
         )}
-      </ContentWrapper>
+      </div>
       <VideoPopup
         show={show}
         setShow={setShow}
