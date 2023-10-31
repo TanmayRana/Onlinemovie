@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
+// import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import SwitchTabs from "../../../components/switchTabs/SwitchTabs";
 import useFetch from "../../../hooks/useFetch";
 import Carousel from "../../../components/carousel/Carousel";
@@ -14,10 +14,10 @@ const TopRated = () => {
 
   return (
     <div className="carouselSection">
-      <ContentWrapper>
+      <div className="contentWrapper">
         <span className="carouselTitle">Top Rated</span>
         <SwitchTabs data={["Movies", "TV Shows"]} onTabChange={onTabChange} />
-      </ContentWrapper>
+      </div>
       <Carousel data={data?.results} loading={loading} endpoint={endpoint} />
     </div>
   );

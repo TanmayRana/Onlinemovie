@@ -6,7 +6,7 @@ import "./style.scss";
 import useFetch from "../../../hooks/useFetch";
 
 import Img from "../../../components/lazyLoadImage/Img";
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
+// import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 
 const HeroBanner = () => {
   const [background, setBackground] = useState("");
@@ -16,9 +16,10 @@ const HeroBanner = () => {
   const { data, loading } = useFetch("/movie/upcoming");
 
   useEffect(() => {
-    const bg =
+    let bg =
       url.backdrop +
-      data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
+      data?.results?.[Math.floor(Math.random() * 20)].backdrop_path;
+
     setBackground(bg);
   }, [data]);
 
@@ -37,7 +38,7 @@ const HeroBanner = () => {
       )}
 
       <div className="opacity-layer"></div>
-      <ContentWrapper>
+      <div className="contentWrapper">
         <div className="heroBannerContent">
           <span className="title">Welcome.</span>
           <span className="subTitle">
@@ -53,7 +54,7 @@ const HeroBanner = () => {
             <button>Search</button>
           </div>
         </div>
-      </ContentWrapper>
+      </div>
     </div>
   );
 };

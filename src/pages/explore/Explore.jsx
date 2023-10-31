@@ -7,7 +7,7 @@ import "./style.scss";
 
 import useFetch from "../../hooks/useFetch";
 import { fetchDataFromApi } from "../../utils/api";
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
+// import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 import MovieCard from "../../components/movieCard/MovieCard";
 import Spinner from "../../components/spinner/Spinner";
 
@@ -97,7 +97,7 @@ const Explore = () => {
 
   return (
     <div className="explorePage">
-      <ContentWrapper>
+      <div className="contentWrapper">
         <div className="pageHeader">
           <div className="pageTitle">
             {mediaType === "tv" ? "Explore TV Shows" : "Explore Movies"}
@@ -151,7 +151,7 @@ const Explore = () => {
             )}
           </>
         )}
-      </ContentWrapper>
+      </div>
     </div>
   );
 };
