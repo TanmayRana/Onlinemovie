@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
 
-import ContentWrapper from "../contentWrapper/ContentWrapper";
+// import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../lazyLoadImage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circleRating/CircleRating";
@@ -47,7 +47,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
 
   return (
     <div className="carousel">
-      <ContentWrapper>
+      <div className="contentWrapper">
         {title && <div className="carouselTitle">{title}</div>}
         <BsFillArrowLeftCircleFill
           className="carouselLeftNav arrow"
@@ -95,7 +95,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
             {skItem()}
           </div>
         )}
-      </ContentWrapper>
+      </div>
     </div>
   );
 };
