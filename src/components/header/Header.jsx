@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ContentWrapper from "../contentWrapper/ContentWrapper";
+// import ContentWrapper from "../contentWrapper/ContentWrapper";
 import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
@@ -73,7 +73,7 @@ const Header = () => {
 
   return (
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
-      <ContentWrapper>
+      <div className="contentWrapper">
         <div className="logo" onClick={() => navigate("/")}>
           <img src={logo} alt="" />
         </div>
@@ -97,11 +97,11 @@ const Header = () => {
             <SlMenu onClick={openMobileMenu} />
           )}
         </div>
-      </ContentWrapper>
+      </div>
 
       {showSearch && (
         <div className="searchBar">
-          <ContentWrapper>
+          <div className="contentWrapper">
             <div className="searchInput">
               <input
                 type="text"
@@ -111,7 +111,7 @@ const Header = () => {
               />
               <VscChromeClose onClick={() => setShowSearch(false)} />
             </div>
-          </ContentWrapper>
+          </div>
         </div>
       )}
     </header>
