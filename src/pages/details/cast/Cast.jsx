@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 import "./style.scss";
 
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
+// import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import Img from "../../../components/lazyLoadImage/Img";
 import avatar from "../../../assets/avatar.png";
 
@@ -21,7 +21,7 @@ const Cast = ({ data, loading }) => {
   };
   return (
     <div className="castSection">
-      <ContentWrapper>
+      <div className="contentWrapper">
         <div className="sectionHeading">Top Cast</div>
         {!loading ? (
           <div className="listItems">
@@ -50,7 +50,7 @@ const Cast = ({ data, loading }) => {
             {skeleton()}
           </div>
         )}
-      </ContentWrapper>
+      </div>
     </div>
   );
 };
